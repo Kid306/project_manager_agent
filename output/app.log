@@ -1,0 +1,127 @@
+2025-05-18 11:45:27,780 - __main__ - INFO - Start the server on port 8012
+2025-05-18 11:45:29,508 - demoRagAgent - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 11:45:29,509 - demoRagAgent - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 11:45:29,509 - demoRagAgent - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 11:45:29,510 - __main__ - INFO - Database connection pool initialized
+2025-05-18 11:45:29,511 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 11:45:29,512 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:45:29,633 - demoRagAgent - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 11:45:31,207 - demoRagAgent - INFO - Graph visualization saved as graph.png
+2025-05-18 11:45:53,695 - __main__ - INFO - Database connection pool closed
+2025-05-18 11:45:53,698 - __main__ - INFO - The service has been shut down
+2025-05-18 11:45:59,397 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 11:45:59,398 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 11:45:59,399 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 11:45:59,400 - __main__ - INFO - Database connection pool initialized
+2025-05-18 11:45:59,401 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 11:45:59,401 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:45:59,425 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 11:45:59,929 - __main__ - INFO - Graph visualization saved as graph.png
+2025-05-18 11:46:07,028 - __main__ - INFO - Agent processing user query
+2025-05-18 11:46:12,349 - __main__ - ERROR - Error in store_memory: Error code: 401 - {'error': {'message': '无效的令牌 (request id: 20250518114856998066583NJ0UetHk)', 'type': 'new_api_error'}}
+2025-05-18 11:46:12,356 - __main__ - INFO - Loading and caching prompt template from prompts/prompt_template_agent.txt
+2025-05-18 11:46:12,356 - __main__ - ERROR - Error in agent processing: 'gbk' codec can't decode byte 0x80 in position 8: illegal multibyte sequence
+2025-05-18 11:46:12,373 - __main__ - INFO - Message has no content, skipping
+2025-05-18 11:46:27,307 - __main__ - INFO - Database connection pool closed
+2025-05-18 11:49:48,853 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 11:49:48,854 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 11:49:48,854 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 11:49:48,855 - __main__ - INFO - Database connection pool initialized
+2025-05-18 11:49:48,856 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 11:49:48,857 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:49:48,880 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 11:49:49,375 - __main__ - INFO - Graph visualization saved as graph.png
+2025-05-18 11:49:54,832 - __main__ - INFO - Agent processing user query
+2025-05-18 11:49:56,595 - __main__ - ERROR - Error in store_memory: Error code: 401 - {'error': {'message': '无效的令牌 (request id: 20250518115241254773921corHCzRF)', 'type': 'new_api_error'}}
+2025-05-18 11:49:56,603 - __main__ - INFO - Loading and caching prompt template from prompts/prompt_template_agent.txt
+2025-05-18 11:49:56,604 - __main__ - ERROR - Error in agent processing: 'gbk' codec can't decode byte 0x80 in position 8: illegal multibyte sequence
+2025-05-18 11:49:56,614 - __main__ - INFO - Message has no content, skipping
+2025-05-18 11:50:32,505 - __main__ - INFO - Database connection pool closed
+2025-05-18 11:50:35,962 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 11:50:35,963 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 11:50:35,963 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 11:50:35,964 - __main__ - INFO - Database connection pool initialized
+2025-05-18 11:50:35,965 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 11:50:35,966 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:50:35,982 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 11:50:36,491 - __main__ - INFO - Graph visualization saved as graph.png
+2025-05-18 11:50:48,716 - __main__ - INFO - Database connection pool closed
+2025-05-18 11:50:51,712 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 11:50:51,713 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 11:50:51,713 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 11:50:51,714 - __main__ - INFO - Database connection pool initialized
+2025-05-18 11:50:51,715 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 11:50:51,716 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:50:51,733 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 11:50:52,274 - __main__ - INFO - Graph visualization saved as graph.png
+2025-05-18 11:50:57,642 - __main__ - INFO - Agent processing user query
+2025-05-18 11:51:01,940 - __main__ - INFO - Loading and caching prompt template from prompts/prompt_template_agent.txt
+2025-05-18 11:51:01,941 - __main__ - ERROR - Error in agent processing: 'gbk' codec can't decode byte 0x80 in position 8: illegal multibyte sequence
+2025-05-18 11:51:01,951 - __main__ - INFO - Message has no content, skipping
+2025-05-18 11:51:51,717 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:52:31,974 - __main__ - INFO - Database connection pool closed
+2025-05-18 11:52:53,284 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 11:52:53,285 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 11:52:53,286 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 11:52:53,287 - __main__ - INFO - Database connection pool initialized
+2025-05-18 11:52:53,288 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 11:52:53,288 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:52:53,303 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 11:52:53,782 - __main__ - INFO - Graph visualization saved as graph.png
+2025-05-18 11:53:40,211 - __main__ - INFO - Database connection pool closed
+2025-05-18 11:53:54,712 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 11:53:54,714 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 11:53:54,714 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 11:53:54,735 - __main__ - INFO - Database connection pool initialized
+2025-05-18 11:53:54,736 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 11:53:54,739 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:53:54,860 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 11:54:05,737 - __main__ - ERROR - Unexpected error: Failed to reach https://mermaid.ink/ API while trying to render your graph after 1 retries. To resolve this issue:
+1. Check your internet connection and try again
+2. Try with higher retry settings: `draw_mermaid_png(..., max_retries=5, retry_delay=2.0)`
+3. Use the Pyppeteer rendering method which will render your graph locally in a browser: `draw_mermaid_png(..., draw_method=MermaidDrawMethod.PYPPETEER)`
+2025-05-18 11:54:05,746 - __main__ - INFO - Database connection pool closed
+2025-05-18 11:54:17,152 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 11:54:17,153 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 11:54:17,153 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 11:54:17,154 - __main__ - INFO - Database connection pool initialized
+2025-05-18 11:54:17,155 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 11:54:17,156 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:54:17,171 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 11:54:17,693 - __main__ - INFO - Graph visualization saved as graph.png
+2025-05-18 11:54:21,032 - __main__ - INFO - Agent processing user query
+2025-05-18 11:54:24,285 - __main__ - INFO - Loading and caching prompt template from prompts/prompt_template_agent.txt
+2025-05-18 11:54:24,285 - __main__ - ERROR - Error in agent processing: 'gbk' codec can't decode byte 0x80 in position 8: illegal multibyte sequence
+2025-05-18 11:54:24,304 - __main__ - INFO - Message has no content, skipping
+2025-05-18 11:55:17,157 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:56:17,158 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:57:17,159 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:57:27,842 - __main__ - INFO - Database connection pool closed
+2025-05-18 11:57:30,981 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 11:57:30,982 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 11:57:30,983 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 11:57:30,983 - __main__ - INFO - Database connection pool initialized
+2025-05-18 11:57:30,985 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 11:57:30,985 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 11:57:31,000 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 11:57:31,534 - __main__ - INFO - Graph visualization saved as graph.png
+2025-05-18 11:57:34,269 - __main__ - INFO - Agent processing user query
+2025-05-18 11:57:37,324 - __main__ - INFO - Loading and caching prompt template from prompts/prompt_template_agent.txt
+2025-05-18 11:57:44,133 - __main__ - INFO - Database connection pool closed
+2025-05-18 14:58:05,781 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 14:58:05,782 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 14:58:05,783 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 14:58:05,783 - __main__ - INFO - Database connection pool initialized
+2025-05-18 14:58:05,784 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 14:58:05,785 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 14:58:05,807 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 14:58:06,320 - __main__ - INFO - Graph visualization saved as graph.png
+2025-05-18 14:59:05,787 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:00:05,790 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:01:05,791 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:02:05,794 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:02:12,187 - __main__ - INFO - Agent processing user query
+2025-05-18 15:02:14,696 - __main__ - INFO - Loading and caching prompt template from prompts/prompt_template_agent.txt
+2025-05-18 15:03:05,797 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:04:05,802 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:04:20,581 - __main__ - INFO - Database connection pool closed
