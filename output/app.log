@@ -125,3 +125,663 @@
 2025-05-18 15:03:05,797 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
 2025-05-18 15:04:05,802 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
 2025-05-18 15:04:20,581 - __main__ - INFO - Database connection pool closed
+2025-05-18 15:08:03,332 - __main__ - INFO - Start the server on port 8012
+2025-05-18 15:08:05,057 - demoRagAgent - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 15:08:05,058 - demoRagAgent - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 15:08:05,058 - demoRagAgent - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 15:08:05,059 - __main__ - INFO - Database connection pool initialized
+2025-05-18 15:08:05,060 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 15:08:05,061 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:08:05,078 - demoRagAgent - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 15:08:05,634 - demoRagAgent - INFO - Graph visualization saved as graph.png
+2025-05-18 15:09:05,062 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:09:40,324 - __main__ - INFO - The user's user_input is: 你好
+2025-05-18 15:09:40,334 - demoRagAgent - INFO - Agent processing user query
+2025-05-18 15:09:43,147 - demoRagAgent - INFO - Loading and caching prompt template from prompts/prompt_template_agent.txt
+2025-05-18 15:09:44,626 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:09:44,641 - __main__ - INFO - Streaming chunk from agent: 你好
+2025-05-18 15:09:44,642 - __main__ - INFO - Streaming chunk from agent: ！
+2025-05-18 15:09:44,679 - __main__ - INFO - Streaming chunk from agent: 有什么
+2025-05-18 15:09:44,681 - __main__ - INFO - Streaming chunk from agent: 我
+2025-05-18 15:09:44,695 - __main__ - INFO - Streaming chunk from agent: 可以
+2025-05-18 15:09:44,696 - __main__ - INFO - Streaming chunk from agent: 帮助
+2025-05-18 15:09:44,725 - __main__ - INFO - Streaming chunk from agent: 你
+2025-05-18 15:09:44,731 - __main__ - INFO - Streaming chunk from agent: 的吗
+2025-05-18 15:09:44,733 - __main__ - INFO - Streaming chunk from agent: ？
+2025-05-18 15:09:44,735 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:09:44,737 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:10:05,064 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:11:05,066 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:12:02,622 - __main__ - INFO - Start the server on port 8012
+2025-05-18 15:12:04,340 - demoRagAgent - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 15:12:04,341 - demoRagAgent - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 15:12:04,342 - demoRagAgent - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 15:12:04,342 - __main__ - INFO - Database connection pool initialized
+2025-05-18 15:12:04,343 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 15:12:04,344 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:12:04,361 - demoRagAgent - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 15:12:04,961 - demoRagAgent - INFO - Graph visualization saved as graph.png
+2025-05-18 15:13:04,345 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:14:04,347 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:15:04,349 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:16:04,352 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:17:04,356 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:18:04,359 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:19:04,360 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:20:04,361 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:21:04,364 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:22:04,365 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:23:04,367 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:24:04,371 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:25:04,373 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:26:04,376 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:26:29,441 - __main__ - INFO - Start the server on port 8012
+2025-05-18 15:26:31,168 - demoRagAgent - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-05-18 15:26:31,169 - demoRagAgent - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-05-18 15:26:31,169 - demoRagAgent - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-05-18 15:26:31,170 - __main__ - INFO - Database connection pool initialized
+2025-05-18 15:26:31,171 - __main__ - DEBUG - Database connection pool initialized
+2025-05-18 15:26:31,172 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:26:31,188 - demoRagAgent - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-05-18 15:26:31,792 - demoRagAgent - INFO - Graph visualization saved as graph.png
+2025-05-18 15:27:31,173 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:28:31,176 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:29:31,180 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:30:31,183 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:31:31,185 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:32:31,187 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:33:31,188 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:33:59,423 - __main__ - INFO - The user's user_input is: 你好
+2025-05-18 15:33:59,432 - demoRagAgent - INFO - Agent processing user query
+2025-05-18 15:34:01,936 - demoRagAgent - INFO - Loading and caching prompt template from prompts/prompt_template_agent.txt
+2025-05-18 15:34:03,179 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:03,195 - __main__ - INFO - Streaming chunk from agent: 你好
+2025-05-18 15:34:03,197 - __main__ - INFO - Streaming chunk from agent: ！
+2025-05-18 15:34:03,256 - __main__ - INFO - Streaming chunk from agent: 有什么
+2025-05-18 15:34:03,257 - __main__ - INFO - Streaming chunk from agent: 我
+2025-05-18 15:34:03,259 - __main__ - INFO - Streaming chunk from agent: 可以
+2025-05-18 15:34:03,260 - __main__ - INFO - Streaming chunk from agent: 帮助
+2025-05-18 15:34:03,270 - __main__ - INFO - Streaming chunk from agent: 你
+2025-05-18 15:34:03,272 - __main__ - INFO - Streaming chunk from agent: 的吗
+2025-05-18 15:34:03,273 - __main__ - INFO - Streaming chunk from agent: ？
+2025-05-18 15:34:03,274 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:03,276 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:18,181 - __main__ - INFO - The user's user_input is: 帮我查询一下张三病例情况
+2025-05-18 15:34:18,186 - demoRagAgent - INFO - Agent processing user query
+2025-05-18 15:34:20,291 - demoRagAgent - INFO - Using cached prompt template for prompts/prompt_template_agent.txt
+2025-05-18 15:34:21,951 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:21,958 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:21,961 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:21,962 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:21,963 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:21,964 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:21,965 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:21,965 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:21,966 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:21,967 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:21,967 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:34:22,799 - demoRagAgent - INFO - Tool retrieve routed to grade_documents based on config
+2025-05-18 15:34:22,800 - demoRagAgent - INFO - Grading documents for relevance
+2025-05-18 15:34:22,801 - demoRagAgent - INFO - Loading and caching prompt template from prompts/prompt_template_grade.txt
+2025-05-18 15:34:23,719 - demoRagAgent - INFO - Document relevance score: yes
+2025-05-18 15:34:23,720 - demoRagAgent - INFO - Routing based on relevance_score: yes, rewrite_count: 0
+2025-05-18 15:34:23,720 - demoRagAgent - INFO - Documents are relevant, proceeding to generate
+2025-05-18 15:34:23,721 - demoRagAgent - INFO - Generating final response
+2025-05-18 15:34:23,722 - demoRagAgent - INFO - Loading and caching prompt template from prompts/prompt_template_generate.txt
+2025-05-18 15:34:24,453 - __main__ - INFO - Streaming chunk from generate: 
+2025-05-18 15:34:24,476 - __main__ - INFO - Streaming chunk from generate: 张
+2025-05-18 15:34:24,477 - __main__ - INFO - Streaming chunk from generate: 三
+2025-05-18 15:34:24,504 - __main__ - INFO - Streaming chunk from generate: 的
+2025-05-18 15:34:24,506 - __main__ - INFO - Streaming chunk from generate: 病例
+2025-05-18 15:34:24,531 - __main__ - INFO - Streaming chunk from generate: 情况
+2025-05-18 15:34:24,533 - __main__ - INFO - Streaming chunk from generate: 如下
+2025-05-18 15:34:24,567 - __main__ - INFO - Streaming chunk from generate: ：
+
+
+2025-05-18 15:34:24,570 - __main__ - INFO - Streaming chunk from generate: **
+2025-05-18 15:34:24,596 - __main__ - INFO - Streaming chunk from generate: 基本
+2025-05-18 15:34:24,598 - __main__ - INFO - Streaming chunk from generate: 信息
+2025-05-18 15:34:24,630 - __main__ - INFO - Streaming chunk from generate: **
+2025-05-18 15:34:24,632 - __main__ - INFO - Streaming chunk from generate: ：
+
+2025-05-18 15:34:24,660 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:24,662 - __main__ - INFO - Streaming chunk from generate:  姓
+2025-05-18 15:34:24,685 - __main__ - INFO - Streaming chunk from generate: 名
+2025-05-18 15:34:24,687 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:24,710 - __main__ - INFO - Streaming chunk from generate: 张
+2025-05-18 15:34:24,712 - __main__ - INFO - Streaming chunk from generate: 三
+2025-05-18 15:34:24,734 - __main__ - INFO - Streaming chunk from generate: 九
+2025-05-18 15:34:24,736 - __main__ - INFO - Streaming chunk from generate: 
+
+2025-05-18 15:34:24,775 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:24,777 - __main__ - INFO - Streaming chunk from generate:  性
+2025-05-18 15:34:24,795 - __main__ - INFO - Streaming chunk from generate: 别
+2025-05-18 15:34:24,796 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:24,820 - __main__ - INFO - Streaming chunk from generate: 男
+2025-05-18 15:34:24,822 - __main__ - INFO - Streaming chunk from generate: 
+
+2025-05-18 15:34:24,843 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:24,846 - __main__ - INFO - Streaming chunk from generate:  出
+2025-05-18 15:34:24,865 - __main__ - INFO - Streaming chunk from generate: 生
+2025-05-18 15:34:24,867 - __main__ - INFO - Streaming chunk from generate: 日期
+2025-05-18 15:34:24,891 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:24,893 - __main__ - INFO - Streaming chunk from generate: 198
+2025-05-18 15:34:24,922 - __main__ - INFO - Streaming chunk from generate: 5
+2025-05-18 15:34:24,924 - __main__ - INFO - Streaming chunk from generate: 年
+2025-05-18 15:34:24,960 - __main__ - INFO - Streaming chunk from generate: 5
+2025-05-18 15:34:24,962 - __main__ - INFO - Streaming chunk from generate: 月
+2025-05-18 15:34:24,987 - __main__ - INFO - Streaming chunk from generate: 20
+2025-05-18 15:34:24,990 - __main__ - INFO - Streaming chunk from generate: 日
+2025-05-18 15:34:25,018 - __main__ - INFO - Streaming chunk from generate: （
+2025-05-18 15:34:25,020 - __main__ - INFO - Streaming chunk from generate: 目前
+2025-05-18 15:34:25,040 - __main__ - INFO - Streaming chunk from generate: 39
+2025-05-18 15:34:25,042 - __main__ - INFO - Streaming chunk from generate: 岁
+2025-05-18 15:34:25,101 - __main__ - INFO - Streaming chunk from generate: ）
+
+2025-05-18 15:34:25,105 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:25,174 - __main__ - INFO - Streaming chunk from generate:  职
+2025-05-18 15:34:25,176 - __main__ - INFO - Streaming chunk from generate: 业
+2025-05-18 15:34:25,228 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:25,229 - __main__ - INFO - Streaming chunk from generate: IT
+2025-05-18 15:34:25,257 - __main__ - INFO - Streaming chunk from generate: 工程
+2025-05-18 15:34:25,258 - __main__ - INFO - Streaming chunk from generate: 师
+2025-05-18 15:34:25,305 - __main__ - INFO - Streaming chunk from generate: 
+
+2025-05-18 15:34:25,306 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:25,335 - __main__ - INFO - Streaming chunk from generate:  血
+2025-05-18 15:34:25,336 - __main__ - INFO - Streaming chunk from generate: 型
+2025-05-18 15:34:25,362 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:25,362 - __main__ - INFO - Streaming chunk from generate: O
+2025-05-18 15:34:25,383 - __main__ - INFO - Streaming chunk from generate: 型
+2025-05-18 15:34:25,384 - __main__ - INFO - Streaming chunk from generate: 
+
+2025-05-18 15:34:25,518 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:25,520 - __main__ - INFO - Streaming chunk from generate:  联系
+2025-05-18 15:34:25,581 - __main__ - INFO - Streaming chunk from generate: 电话
+2025-05-18 15:34:25,583 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:25,674 - __main__ - INFO - Streaming chunk from generate: 138
+2025-05-18 15:34:25,676 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:25,720 - __main__ - INFO - Streaming chunk from generate: 123
+2025-05-18 15:34:25,721 - __main__ - INFO - Streaming chunk from generate: 4
+2025-05-18 15:34:25,799 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:25,801 - __main__ - INFO - Streaming chunk from generate: 567
+2025-05-18 15:34:26,044 - __main__ - INFO - Streaming chunk from generate: 8
+2025-05-18 15:34:26,046 - __main__ - INFO - Streaming chunk from generate: 
+
+2025-05-18 15:34:26,047 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:26,048 - __main__ - INFO - Streaming chunk from generate:  
+2025-05-18 15:34:26,049 - __main__ - INFO - Streaming chunk from generate: 电子
+2025-05-18 15:34:26,127 - __main__ - INFO - Streaming chunk from generate: 邮箱
+2025-05-18 15:34:26,133 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:26,134 - __main__ - INFO - Streaming chunk from generate: zh
+2025-05-18 15:34:26,225 - __main__ - INFO - Streaming chunk from generate: ang
+2025-05-18 15:34:26,228 - __main__ - INFO - Streaming chunk from generate: san
+2025-05-18 15:34:26,320 - __main__ - INFO - Streaming chunk from generate: @example
+2025-05-18 15:34:26,323 - __main__ - INFO - Streaming chunk from generate: .com
+2025-05-18 15:34:26,424 - __main__ - INFO - Streaming chunk from generate: 
+
+2025-05-18 15:34:26,425 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:26,516 - __main__ - INFO - Streaming chunk from generate:  
+2025-05-18 15:34:26,518 - __main__ - INFO - Streaming chunk from generate: 住
+2025-05-18 15:34:26,732 - __main__ - INFO - Streaming chunk from generate: 址
+2025-05-18 15:34:26,735 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:26,774 - __main__ - INFO - Streaming chunk from generate: 上海
+2025-05-18 15:34:26,777 - __main__ - INFO - Streaming chunk from generate: 市
+2025-05-18 15:34:26,841 - __main__ - INFO - Streaming chunk from generate: 浦
+2025-05-18 15:34:26,843 - __main__ - INFO - Streaming chunk from generate: 东
+2025-05-18 15:34:26,965 - __main__ - INFO - Streaming chunk from generate: 新区
+2025-05-18 15:34:26,967 - __main__ - INFO - Streaming chunk from generate: 张
+2025-05-18 15:34:27,074 - __main__ - INFO - Streaming chunk from generate: 江
+2025-05-18 15:34:27,076 - __main__ - INFO - Streaming chunk from generate: 路
+2025-05-18 15:34:27,192 - __main__ - INFO - Streaming chunk from generate: 123
+2025-05-18 15:34:27,195 - __main__ - INFO - Streaming chunk from generate: 号
+2025-05-18 15:34:27,364 - __main__ - INFO - Streaming chunk from generate: 
+
+2025-05-18 15:34:27,365 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:27,448 - __main__ - INFO - Streaming chunk from generate:  紧
+2025-05-18 15:34:27,449 - __main__ - INFO - Streaming chunk from generate: 急
+2025-05-18 15:34:27,532 - __main__ - INFO - Streaming chunk from generate: 联系人
+2025-05-18 15:34:27,533 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:27,594 - __main__ - INFO - Streaming chunk from generate: 妻
+2025-05-18 15:34:27,596 - __main__ - INFO - Streaming chunk from generate: 子
+2025-05-18 15:34:27,655 - __main__ - INFO - Streaming chunk from generate: 李
+2025-05-18 15:34:27,657 - __main__ - INFO - Streaming chunk from generate: 四六
+2025-05-18 15:34:27,695 - __main__ - INFO - Streaming chunk from generate: ，
+2025-05-18 15:34:27,697 - __main__ - INFO - Streaming chunk from generate: 联系电话
+2025-05-18 15:34:27,718 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:27,720 - __main__ - INFO - Streaming chunk from generate: 138
+2025-05-18 15:34:27,749 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:27,751 - __main__ - INFO - Streaming chunk from generate: 876
+2025-05-18 15:34:27,776 - __main__ - INFO - Streaming chunk from generate: 5
+2025-05-18 15:34:27,778 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:27,800 - __main__ - INFO - Streaming chunk from generate: 432
+2025-05-18 15:34:27,801 - __main__ - INFO - Streaming chunk from generate: 1
+2025-05-18 15:34:27,827 - __main__ - INFO - Streaming chunk from generate: 
+
+
+2025-05-18 15:34:27,829 - __main__ - INFO - Streaming chunk from generate: **
+2025-05-18 15:34:27,847 - __main__ - INFO - Streaming chunk from generate: 医疗
+2025-05-18 15:34:27,848 - __main__ - INFO - Streaming chunk from generate: 历史
+2025-05-18 15:34:27,868 - __main__ - INFO - Streaming chunk from generate: **
+2025-05-18 15:34:27,869 - __main__ - INFO - Streaming chunk from generate: ：
+
+2025-05-18 15:34:27,900 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:27,901 - __main__ - INFO - Streaming chunk from generate:  
+2025-05-18 15:34:27,918 - __main__ - INFO - Streaming chunk from generate: 200
+2025-05-18 15:34:27,919 - __main__ - INFO - Streaming chunk from generate: 5
+2025-05-18 15:34:27,946 - __main__ - INFO - Streaming chunk from generate: 年
+2025-05-18 15:34:27,947 - __main__ - INFO - Streaming chunk from generate: 被
+2025-05-18 15:34:27,970 - __main__ - INFO - Streaming chunk from generate: 确
+2025-05-18 15:34:27,972 - __main__ - INFO - Streaming chunk from generate: 诊
+2025-05-18 15:34:27,993 - __main__ - INFO - Streaming chunk from generate: 为
+2025-05-18 15:34:27,994 - __main__ - INFO - Streaming chunk from generate: 高
+2025-05-18 15:34:28,015 - __main__ - INFO - Streaming chunk from generate: 血
+2025-05-18 15:34:28,018 - __main__ - INFO - Streaming chunk from generate: 压
+2025-05-18 15:34:28,042 - __main__ - INFO - Streaming chunk from generate: ，
+2025-05-18 15:34:28,044 - __main__ - INFO - Streaming chunk from generate: 开始
+2025-05-18 15:34:28,086 - __main__ - INFO - Streaming chunk from generate: 接受
+2025-05-18 15:34:28,090 - __main__ - INFO - Streaming chunk from generate: 降
+2025-05-18 15:34:28,120 - __main__ - INFO - Streaming chunk from generate: 压
+2025-05-18 15:34:28,122 - __main__ - INFO - Streaming chunk from generate: 药
+2025-05-18 15:34:28,143 - __main__ - INFO - Streaming chunk from generate: 物
+2025-05-18 15:34:28,145 - __main__ - INFO - Streaming chunk from generate: 治疗
+2025-05-18 15:34:28,205 - __main__ - INFO - Streaming chunk from generate: 。
+
+2025-05-18 15:34:28,206 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:28,212 - __main__ - INFO - Streaming chunk from generate:  
+2025-05-18 15:34:28,212 - __main__ - INFO - Streaming chunk from generate: 201
+2025-05-18 15:34:28,217 - __main__ - INFO - Streaming chunk from generate: 0
+2025-05-18 15:34:28,218 - __main__ - INFO - Streaming chunk from generate: 年
+2025-05-18 15:34:28,243 - __main__ - INFO - Streaming chunk from generate: 被
+2025-05-18 15:34:28,244 - __main__ - INFO - Streaming chunk from generate: 确
+2025-05-18 15:34:28,267 - __main__ - INFO - Streaming chunk from generate: 诊
+2025-05-18 15:34:28,269 - __main__ - INFO - Streaming chunk from generate: 为
+2025-05-18 15:34:28,291 - __main__ - INFO - Streaming chunk from generate: 二
+2025-05-18 15:34:28,292 - __main__ - INFO - Streaming chunk from generate: 型
+2025-05-18 15:34:28,309 - __main__ - INFO - Streaming chunk from generate: 糖
+2025-05-18 15:34:28,310 - __main__ - INFO - Streaming chunk from generate: 尿
+2025-05-18 15:34:28,338 - __main__ - INFO - Streaming chunk from generate: 病
+2025-05-18 15:34:28,340 - __main__ - INFO - Streaming chunk from generate: ，
+2025-05-18 15:34:28,359 - __main__ - INFO - Streaming chunk from generate: 开始
+2025-05-18 15:34:28,362 - __main__ - INFO - Streaming chunk from generate: 使用
+2025-05-18 15:34:28,385 - __main__ - INFO - Streaming chunk from generate: 口
+2025-05-18 15:34:28,387 - __main__ - INFO - Streaming chunk from generate: 服
+2025-05-18 15:34:28,416 - __main__ - INFO - Streaming chunk from generate: 降
+2025-05-18 15:34:28,418 - __main__ - INFO - Streaming chunk from generate: 糖
+2025-05-18 15:34:28,428 - __main__ - INFO - Streaming chunk from generate: 药
+2025-05-18 15:34:28,430 - __main__ - INFO - Streaming chunk from generate: 。
+
+2025-05-18 15:34:28,452 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:28,455 - __main__ - INFO - Streaming chunk from generate:  
+2025-05-18 15:34:28,475 - __main__ - INFO - Streaming chunk from generate: 201
+2025-05-18 15:34:28,477 - __main__ - INFO - Streaming chunk from generate: 7
+2025-05-18 15:34:28,501 - __main__ - INFO - Streaming chunk from generate: 年
+2025-05-18 15:34:28,503 - __main__ - INFO - Streaming chunk from generate: 被
+2025-05-18 15:34:28,530 - __main__ - INFO - Streaming chunk from generate: 诊
+2025-05-18 15:34:28,531 - __main__ - INFO - Streaming chunk from generate: 断
+2025-05-18 15:34:28,588 - __main__ - INFO - Streaming chunk from generate: 为
+2025-05-18 15:34:28,590 - __main__ - INFO - Streaming chunk from generate: 脂
+2025-05-18 15:34:28,614 - __main__ - INFO - Streaming chunk from generate: 肪
+2025-05-18 15:34:28,616 - __main__ - INFO - Streaming chunk from generate: 肝
+2025-05-18 15:34:28,645 - __main__ - INFO - Streaming chunk from generate: ，
+2025-05-18 15:34:28,647 - __main__ - INFO - Streaming chunk from generate: 建议
+2025-05-18 15:34:28,672 - __main__ - INFO - Streaming chunk from generate: 通过
+2025-05-18 15:34:28,673 - __main__ - INFO - Streaming chunk from generate: 饮
+2025-05-18 15:34:28,702 - __main__ - INFO - Streaming chunk from generate: 食
+2025-05-18 15:34:28,703 - __main__ - INFO - Streaming chunk from generate: 调整
+2025-05-18 15:34:28,724 - __main__ - INFO - Streaming chunk from generate: 和
+2025-05-18 15:34:28,725 - __main__ - INFO - Streaming chunk from generate: 增加
+2025-05-18 15:34:28,762 - __main__ - INFO - Streaming chunk from generate: 运动
+2025-05-18 15:34:28,764 - __main__ - INFO - Streaming chunk from generate: 来
+2025-05-18 15:34:28,768 - __main__ - INFO - Streaming chunk from generate: 改善
+2025-05-18 15:34:28,770 - __main__ - INFO - Streaming chunk from generate: 。
+
+2025-05-18 15:34:28,789 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:28,792 - __main__ - INFO - Streaming chunk from generate:  
+2025-05-18 15:34:28,841 - __main__ - INFO - Streaming chunk from generate: 202
+2025-05-18 15:34:28,843 - __main__ - INFO - Streaming chunk from generate: 2
+2025-05-18 15:34:28,875 - __main__ - INFO - Streaming chunk from generate: 年
+2025-05-18 15:34:28,877 - __main__ - INFO - Streaming chunk from generate: 因
+2025-05-18 15:34:28,895 - __main__ - INFO - Streaming chunk from generate: 腰
+2025-05-18 15:34:28,897 - __main__ - INFO - Streaming chunk from generate: 椎
+2025-05-18 15:34:28,917 - __main__ - INFO - Streaming chunk from generate: 间
+2025-05-18 15:34:28,919 - __main__ - INFO - Streaming chunk from generate: 盘
+2025-05-18 15:34:28,945 - __main__ - INFO - Streaming chunk from generate: 突出
+2025-05-18 15:34:28,946 - __main__ - INFO - Streaming chunk from generate: 接受
+2025-05-18 15:34:28,988 - __main__ - INFO - Streaming chunk from generate: 微
+2025-05-18 15:34:28,990 - __main__ - INFO - Streaming chunk from generate: 创
+2025-05-18 15:34:29,011 - __main__ - INFO - Streaming chunk from generate: 手
+2025-05-18 15:34:29,012 - __main__ - INFO - Streaming chunk from generate: 术
+2025-05-18 15:34:29,038 - __main__ - INFO - Streaming chunk from generate: ，
+2025-05-18 15:34:29,039 - __main__ - INFO - Streaming chunk from generate: 术
+2025-05-18 15:34:29,059 - __main__ - INFO - Streaming chunk from generate: 后
+2025-05-18 15:34:29,059 - __main__ - INFO - Streaming chunk from generate: 恢复
+2025-05-18 15:34:29,105 - __main__ - INFO - Streaming chunk from generate: 良
+2025-05-18 15:34:29,107 - __main__ - INFO - Streaming chunk from generate: 好
+2025-05-18 15:34:29,185 - __main__ - INFO - Streaming chunk from generate: 。
+
+2025-05-18 15:34:29,187 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:29,190 - __main__ - INFO - Streaming chunk from generate:  对
+2025-05-18 15:34:29,191 - __main__ - INFO - Streaming chunk from generate: 青
+2025-05-18 15:34:29,215 - __main__ - INFO - Streaming chunk from generate: 霉
+2025-05-18 15:34:29,218 - __main__ - INFO - Streaming chunk from generate: 素
+2025-05-18 15:34:29,238 - __main__ - INFO - Streaming chunk from generate: 有
+2025-05-18 15:34:29,239 - __main__ - INFO - Streaming chunk from generate: 过
+2025-05-18 15:34:29,260 - __main__ - INFO - Streaming chunk from generate: 敏
+2025-05-18 15:34:29,262 - __main__ - INFO - Streaming chunk from generate: 反
+2025-05-18 15:34:29,279 - __main__ - INFO - Streaming chunk from generate: 应
+2025-05-18 15:34:29,279 - __main__ - INFO - Streaming chunk from generate: ，
+2025-05-18 15:34:29,307 - __main__ - INFO - Streaming chunk from generate: 曾
+2025-05-18 15:34:29,308 - __main__ - INFO - Streaming chunk from generate: 出现
+2025-05-18 15:34:29,337 - __main__ - INFO - Streaming chunk from generate: 皮
+2025-05-18 15:34:29,338 - __main__ - INFO - Streaming chunk from generate: 疹
+2025-05-18 15:34:29,351 - __main__ - INFO - Streaming chunk from generate: 和
+2025-05-18 15:34:29,352 - __main__ - INFO - Streaming chunk from generate: 呼
+2025-05-18 15:34:29,374 - __main__ - INFO - Streaming chunk from generate: 吸
+2025-05-18 15:34:29,376 - __main__ - INFO - Streaming chunk from generate: 困难
+2025-05-18 15:34:29,401 - __main__ - INFO - Streaming chunk from generate: ；
+2025-05-18 15:34:29,403 - __main__ - INFO - Streaming chunk from generate: 对
+2025-05-18 15:34:29,423 - __main__ - INFO - Streaming chunk from generate: 海
+2025-05-18 15:34:29,425 - __main__ - INFO - Streaming chunk from generate: 鲜
+2025-05-18 15:34:29,441 - __main__ - INFO - Streaming chunk from generate: 有
+2025-05-18 15:34:29,443 - __main__ - INFO - Streaming chunk from generate: 轻
+2025-05-18 15:34:29,467 - __main__ - INFO - Streaming chunk from generate: 度
+2025-05-18 15:34:29,469 - __main__ - INFO - Streaming chunk from generate: 过
+2025-05-18 15:34:29,494 - __main__ - INFO - Streaming chunk from generate: 敏
+2025-05-18 15:34:29,496 - __main__ - INFO - Streaming chunk from generate: 反
+2025-05-18 15:34:29,526 - __main__ - INFO - Streaming chunk from generate: 应
+2025-05-18 15:34:29,529 - __main__ - INFO - Streaming chunk from generate: 。
+
+
+2025-05-18 15:34:29,544 - __main__ - INFO - Streaming chunk from generate: **
+2025-05-18 15:34:29,545 - __main__ - INFO - Streaming chunk from generate: 生活
+2025-05-18 15:34:29,567 - __main__ - INFO - Streaming chunk from generate: 方式
+2025-05-18 15:34:29,569 - __main__ - INFO - Streaming chunk from generate: 和
+2025-05-18 15:34:29,610 - __main__ - INFO - Streaming chunk from generate: 习
+2025-05-18 15:34:29,613 - __main__ - INFO - Streaming chunk from generate: 惯
+2025-05-18 15:34:29,640 - __main__ - INFO - Streaming chunk from generate: **
+2025-05-18 15:34:29,642 - __main__ - INFO - Streaming chunk from generate: ：
+
+2025-05-18 15:34:29,661 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:29,663 - __main__ - INFO - Streaming chunk from generate:  饮
+2025-05-18 15:34:29,685 - __main__ - INFO - Streaming chunk from generate: 食
+2025-05-18 15:34:29,687 - __main__ - INFO - Streaming chunk from generate: 习
+2025-05-18 15:34:29,716 - __main__ - INFO - Streaming chunk from generate: 惯
+2025-05-18 15:34:29,718 - __main__ - INFO - Streaming chunk from generate: 偏
+2025-05-18 15:34:29,735 - __main__ - INFO - Streaming chunk from generate: 向
+2025-05-18 15:34:29,736 - __main__ - INFO - Streaming chunk from generate: 高
+2025-05-18 15:34:29,760 - __main__ - INFO - Streaming chunk from generate: 脂
+2025-05-18 15:34:29,762 - __main__ - INFO - Streaming chunk from generate: 肪
+2025-05-18 15:34:29,787 - __main__ - INFO - Streaming chunk from generate: 和
+2025-05-18 15:34:29,789 - __main__ - INFO - Streaming chunk from generate: 高
+2025-05-18 15:34:29,817 - __main__ - INFO - Streaming chunk from generate: 糖
+2025-05-18 15:34:29,819 - __main__ - INFO - Streaming chunk from generate: 食品
+2025-05-18 15:34:29,941 - __main__ - INFO - Streaming chunk from generate: ，
+2025-05-18 15:34:29,947 - __main__ - INFO - Streaming chunk from generate: 蔬
+2025-05-18 15:34:29,948 - __main__ - INFO - Streaming chunk from generate: 菜
+2025-05-18 15:34:29,948 - __main__ - INFO - Streaming chunk from generate: 和
+2025-05-18 15:34:29,949 - __main__ - INFO - Streaming chunk from generate: 水果
+2025-05-18 15:34:29,950 - __main__ - INFO - Streaming chunk from generate: 摄
+2025-05-18 15:34:29,950 - __main__ - INFO - Streaming chunk from generate: 入
+2025-05-18 15:34:29,951 - __main__ - INFO - Streaming chunk from generate: 较
+2025-05-18 15:34:29,957 - __main__ - INFO - Streaming chunk from generate: 少
+2025-05-18 15:34:29,958 - __main__ - INFO - Streaming chunk from generate: ，
+2025-05-18 15:34:29,959 - __main__ - INFO - Streaming chunk from generate: 盐
+2025-05-18 15:34:29,959 - __main__ - INFO - Streaming chunk from generate: 分
+2025-05-18 15:34:30,001 - __main__ - INFO - Streaming chunk from generate: 摄
+2025-05-18 15:34:30,005 - __main__ - INFO - Streaming chunk from generate: 入
+2025-05-18 15:34:30,006 - __main__ - INFO - Streaming chunk from generate: 偏
+2025-05-18 15:34:30,006 - __main__ - INFO - Streaming chunk from generate: 高
+2025-05-18 15:34:30,019 - __main__ - INFO - Streaming chunk from generate: 。
+
+2025-05-18 15:34:30,020 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:30,046 - __main__ - INFO - Streaming chunk from generate:  每
+2025-05-18 15:34:30,047 - __main__ - INFO - Streaming chunk from generate: 周
+2025-05-18 15:34:30,063 - __main__ - INFO - Streaming chunk from generate: 仅
+2025-05-18 15:34:30,064 - __main__ - INFO - Streaming chunk from generate: 进行
+2025-05-18 15:34:30,084 - __main__ - INFO - Streaming chunk from generate: 一次
+2025-05-18 15:34:30,086 - __main__ - INFO - Streaming chunk from generate: 轻
+2025-05-18 15:34:30,110 - __main__ - INFO - Streaming chunk from generate: 度
+2025-05-18 15:34:30,112 - __main__ - INFO - Streaming chunk from generate: 运动
+2025-05-18 15:34:30,135 - __main__ - INFO - Streaming chunk from generate: （
+2025-05-18 15:34:30,137 - __main__ - INFO - Streaming chunk from generate: 如
+2025-05-18 15:34:30,149 - __main__ - INFO - Streaming chunk from generate: 散
+2025-05-18 15:34:30,150 - __main__ - INFO - Streaming chunk from generate: 步
+2025-05-18 15:34:30,171 - __main__ - INFO - Streaming chunk from generate: ）。
+
+2025-05-18 15:34:30,173 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:30,184 - __main__ - INFO - Streaming chunk from generate:  无
+2025-05-18 15:34:30,186 - __main__ - INFO - Streaming chunk from generate: 吸
+2025-05-18 15:34:30,209 - __main__ - INFO - Streaming chunk from generate: 烟
+2025-05-18 15:34:30,211 - __main__ - INFO - Streaming chunk from generate: 史
+2025-05-18 15:34:30,225 - __main__ - INFO - Streaming chunk from generate: ，但
+2025-05-18 15:34:30,226 - __main__ - INFO - Streaming chunk from generate: 每
+2025-05-18 15:34:30,246 - __main__ - INFO - Streaming chunk from generate: 周
+2025-05-18 15:34:30,248 - __main__ - INFO - Streaming chunk from generate: 饮
+2025-05-18 15:34:30,262 - __main__ - INFO - Streaming chunk from generate: 酒
+2025-05-18 15:34:30,264 - __main__ - INFO - Streaming chunk from generate: 2
+2025-05-18 15:34:30,285 - __main__ - INFO - Streaming chunk from generate: 至
+2025-05-18 15:34:30,288 - __main__ - INFO - Streaming chunk from generate: 3
+2025-05-18 15:34:30,308 - __main__ - INFO - Streaming chunk from generate: 次
+2025-05-18 15:34:30,309 - __main__ - INFO - Streaming chunk from generate: ，每
+2025-05-18 15:34:30,326 - __main__ - INFO - Streaming chunk from generate: 次
+2025-05-18 15:34:30,326 - __main__ - INFO - Streaming chunk from generate: 约
+2025-05-18 15:34:30,353 - __main__ - INFO - Streaming chunk from generate: 300
+2025-05-18 15:34:30,354 - __main__ - INFO - Streaming chunk from generate: 毫
+2025-05-18 15:34:30,371 - __main__ - INFO - Streaming chunk from generate: 升
+2025-05-18 15:34:30,372 - __main__ - INFO - Streaming chunk from generate: 啤
+2025-05-18 15:34:30,392 - __main__ - INFO - Streaming chunk from generate: 酒
+2025-05-18 15:34:30,394 - __main__ - INFO - Streaming chunk from generate: 。
+
+2025-05-18 15:34:30,420 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:30,421 - __main__ - INFO - Streaming chunk from generate:  平
+2025-05-18 15:34:30,450 - __main__ - INFO - Streaming chunk from generate: 均
+2025-05-18 15:34:30,451 - __main__ - INFO - Streaming chunk from generate: 睡
+2025-05-18 15:34:30,466 - __main__ - INFO - Streaming chunk from generate: 眠
+2025-05-18 15:34:30,467 - __main__ - INFO - Streaming chunk from generate: 时间
+2025-05-18 15:34:30,517 - __main__ - INFO - Streaming chunk from generate: 为
+2025-05-18 15:34:30,519 - __main__ - INFO - Streaming chunk from generate: 每
+2025-05-18 15:34:30,520 - __main__ - INFO - Streaming chunk from generate: 晚
+2025-05-18 15:34:30,521 - __main__ - INFO - Streaming chunk from generate: 6
+2025-05-18 15:34:30,526 - __main__ - INFO - Streaming chunk from generate: 小时
+2025-05-18 15:34:30,528 - __main__ - INFO - Streaming chunk from generate: ，
+2025-05-18 15:34:30,569 - __main__ - INFO - Streaming chunk from generate: 常
+2025-05-18 15:34:30,570 - __main__ - INFO - Streaming chunk from generate: 感
+2025-05-18 15:34:30,628 - __main__ - INFO - Streaming chunk from generate: 到
+2025-05-18 15:34:30,629 - __main__ - INFO - Streaming chunk from generate: 疲
+2025-05-18 15:34:30,656 - __main__ - INFO - Streaming chunk from generate: 惫
+2025-05-18 15:34:30,658 - __main__ - INFO - Streaming chunk from generate: 。
+
+
+2025-05-18 15:34:30,680 - __main__ - INFO - Streaming chunk from generate: **
+2025-05-18 15:34:30,682 - __main__ - INFO - Streaming chunk from generate: 体
+2025-05-18 15:34:30,697 - __main__ - INFO - Streaming chunk from generate: 检
+2025-05-18 15:34:30,699 - __main__ - INFO - Streaming chunk from generate: 与
+2025-05-18 15:34:30,715 - __main__ - INFO - Streaming chunk from generate: 化
+2025-05-18 15:34:30,716 - __main__ - INFO - Streaming chunk from generate: 验
+2025-05-18 15:34:30,739 - __main__ - INFO - Streaming chunk from generate: 结果
+2025-05-18 15:34:30,741 - __main__ - INFO - Streaming chunk from generate: **
+2025-05-18 15:34:30,765 - __main__ - INFO - Streaming chunk from generate: （
+2025-05-18 15:34:30,767 - __main__ - INFO - Streaming chunk from generate: 202
+2025-05-18 15:34:30,790 - __main__ - INFO - Streaming chunk from generate: 4
+2025-05-18 15:34:30,793 - __main__ - INFO - Streaming chunk from generate: 年
+2025-05-18 15:34:30,806 - __main__ - INFO - Streaming chunk from generate: 8
+2025-05-18 15:34:30,807 - __main__ - INFO - Streaming chunk from generate: 月
+2025-05-18 15:34:30,843 - __main__ - INFO - Streaming chunk from generate: 15
+2025-05-18 15:34:30,845 - __main__ - INFO - Streaming chunk from generate: 日
+2025-05-18 15:34:30,857 - __main__ - INFO - Streaming chunk from generate: ）
+2025-05-18 15:34:30,860 - __main__ - INFO - Streaming chunk from generate: ：
+
+2025-05-18 15:34:30,898 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:30,900 - __main__ - INFO - Streaming chunk from generate:  身
+2025-05-18 15:34:30,938 - __main__ - INFO - Streaming chunk from generate: 高
+2025-05-18 15:34:30,939 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:30,962 - __main__ - INFO - Streaming chunk from generate: 175
+2025-05-18 15:34:30,963 - __main__ - INFO - Streaming chunk from generate: 厘米
+2025-05-18 15:34:30,977 - __main__ - INFO - Streaming chunk from generate: 
+
+2025-05-18 15:34:30,978 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:31,014 - __main__ - INFO - Streaming chunk from generate:  
+2025-05-18 15:34:31,015 - __main__ - INFO - Streaming chunk from generate: 体
+2025-05-18 15:34:31,034 - __main__ - INFO - Streaming chunk from generate: 重
+2025-05-18 15:34:31,036 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:31,051 - __main__ - INFO - Streaming chunk from generate: 78
+2025-05-18 15:34:31,055 - __main__ - INFO - Streaming chunk from generate: 公斤
+2025-05-18 15:34:31,079 - __main__ - INFO - Streaming chunk from generate: （
+2025-05-18 15:34:31,080 - __main__ - INFO - Streaming chunk from generate: BMI
+2025-05-18 15:34:31,094 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:31,095 - __main__ - INFO - Streaming chunk from generate: 25
+2025-05-18 15:34:31,122 - __main__ - INFO - Streaming chunk from generate: .
+2025-05-18 15:34:31,122 - __main__ - INFO - Streaming chunk from generate: 5
+2025-05-18 15:34:31,146 - __main__ - INFO - Streaming chunk from generate: ，
+2025-05-18 15:34:31,146 - __main__ - INFO - Streaming chunk from generate: 表
+2025-05-18 15:34:31,191 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:34:31,296 - __main__ - INFO - Streaming chunk from generate: 明
+2025-05-18 15:34:31,298 - __main__ - INFO - Streaming chunk from generate: 超
+2025-05-18 15:34:31,299 - __main__ - INFO - Streaming chunk from generate: 重
+2025-05-18 15:34:31,299 - __main__ - INFO - Streaming chunk from generate: ）
+
+2025-05-18 15:34:31,300 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:31,300 - __main__ - INFO - Streaming chunk from generate:  腰
+2025-05-18 15:34:31,300 - __main__ - INFO - Streaming chunk from generate: 围
+2025-05-18 15:34:31,301 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:31,316 - __main__ - INFO - Streaming chunk from generate: 92
+2025-05-18 15:34:31,317 - __main__ - INFO - Streaming chunk from generate: 厘米
+2025-05-18 15:34:31,377 - __main__ - INFO - Streaming chunk from generate: （
+2025-05-18 15:34:31,378 - __main__ - INFO - Streaming chunk from generate: 略
+2025-05-18 15:34:31,379 - __main__ - INFO - Streaming chunk from generate: 高
+2025-05-18 15:34:31,379 - __main__ - INFO - Streaming chunk from generate: 于
+2025-05-18 15:34:31,404 - __main__ - INFO - Streaming chunk from generate: 健康
+2025-05-18 15:34:31,412 - __main__ - INFO - Streaming chunk from generate: 范围
+2025-05-18 15:34:31,439 - __main__ - INFO - Streaming chunk from generate: ）
+
+2025-05-18 15:34:31,440 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:31,462 - __main__ - INFO - Streaming chunk from generate:  血
+2025-05-18 15:34:31,464 - __main__ - INFO - Streaming chunk from generate: 压
+2025-05-18 15:34:31,484 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:31,486 - __main__ - INFO - Streaming chunk from generate: 135
+2025-05-18 15:34:31,518 - __main__ - INFO - Streaming chunk from generate: /
+2025-05-18 15:34:31,521 - __main__ - INFO - Streaming chunk from generate: 85
+2025-05-18 15:34:31,534 - __main__ - INFO - Streaming chunk from generate: 毫米
+2025-05-18 15:34:31,536 - __main__ - INFO - Streaming chunk from generate: 汞
+2025-05-18 15:34:31,563 - __main__ - INFO - Streaming chunk from generate: 柱
+2025-05-18 15:34:31,564 - __main__ - INFO - Streaming chunk from generate: （
+2025-05-18 15:34:31,724 - __main__ - INFO - Streaming chunk from generate: 轻
+2025-05-18 15:34:31,727 - __main__ - INFO - Streaming chunk from generate: 度
+2025-05-18 15:34:31,735 - __main__ - INFO - Streaming chunk from generate: 高
+2025-05-18 15:34:31,737 - __main__ - INFO - Streaming chunk from generate: 血
+2025-05-18 15:34:31,740 - __main__ - INFO - Streaming chunk from generate: 压
+2025-05-18 15:34:31,740 - __main__ - INFO - Streaming chunk from generate: ）
+
+2025-05-18 15:34:31,741 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:31,741 - __main__ - INFO - Streaming chunk from generate:  心
+2025-05-18 15:34:31,742 - __main__ - INFO - Streaming chunk from generate: 率
+2025-05-18 15:34:31,742 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:31,743 - __main__ - INFO - Streaming chunk from generate: 每
+2025-05-18 15:34:31,743 - __main__ - INFO - Streaming chunk from generate: 分钟
+2025-05-18 15:34:31,743 - __main__ - INFO - Streaming chunk from generate: 78
+2025-05-18 15:34:31,744 - __main__ - INFO - Streaming chunk from generate: 次
+2025-05-18 15:34:31,745 - __main__ - INFO - Streaming chunk from generate: （
+2025-05-18 15:34:31,745 - __main__ - INFO - Streaming chunk from generate: 正常
+2025-05-18 15:34:31,784 - __main__ - INFO - Streaming chunk from generate: 范围
+2025-05-18 15:34:31,785 - __main__ - INFO - Streaming chunk from generate: ）
+
+2025-05-18 15:34:31,824 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:31,826 - __main__ - INFO - Streaming chunk from generate:  空
+2025-05-18 15:34:31,870 - __main__ - INFO - Streaming chunk from generate: 腹
+2025-05-18 15:34:31,870 - __main__ - INFO - Streaming chunk from generate: 血
+2025-05-18 15:34:31,897 - __main__ - INFO - Streaming chunk from generate: 糖
+2025-05-18 15:34:31,899 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:31,944 - __main__ - INFO - Streaming chunk from generate: 6
+2025-05-18 15:34:31,946 - __main__ - INFO - Streaming chunk from generate: .
+2025-05-18 15:34:31,964 - __main__ - INFO - Streaming chunk from generate: 8
+2025-05-18 15:34:31,966 - __main__ - INFO - Streaming chunk from generate: 毫
+2025-05-18 15:34:31,993 - __main__ - INFO - Streaming chunk from generate: 摩
+2025-05-18 15:34:31,995 - __main__ - INFO - Streaming chunk from generate: 尔
+2025-05-18 15:34:32,019 - __main__ - INFO - Streaming chunk from generate: /
+2025-05-18 15:34:32,021 - __main__ - INFO - Streaming chunk from generate: 升
+2025-05-18 15:34:32,035 - __main__ - INFO - Streaming chunk from generate: （
+2025-05-18 15:34:32,039 - __main__ - INFO - Streaming chunk from generate: 略
+2025-05-18 15:34:32,082 - __main__ - INFO - Streaming chunk from generate: 高
+2025-05-18 15:34:32,085 - __main__ - INFO - Streaming chunk from generate: ）
+
+2025-05-18 15:34:32,121 - __main__ - INFO - Streaming chunk from generate: -
+2025-05-18 15:34:32,123 - __main__ - INFO - Streaming chunk from generate:  餐
+2025-05-18 15:34:32,147 - __main__ - INFO - Streaming chunk from generate: 后
+2025-05-18 15:34:32,149 - __main__ - INFO - Streaming chunk from generate: 2
+2025-05-18 15:34:32,181 - __main__ - INFO - Streaming chunk from generate: 小时
+2025-05-18 15:34:32,182 - __main__ - INFO - Streaming chunk from generate: 血
+2025-05-18 15:34:32,198 - __main__ - INFO - Streaming chunk from generate: 糖
+2025-05-18 15:34:32,200 - __main__ - INFO - Streaming chunk from generate: ：
+2025-05-18 15:34:32,230 - __main__ - INFO - Streaming chunk from generate: 8
+2025-05-18 15:34:32,231 - __main__ - INFO - Streaming chunk from generate: .
+2025-05-18 15:34:32,247 - __main__ - INFO - Streaming chunk from generate: 9
+2025-05-18 15:34:32,249 - __main__ - INFO - Streaming chunk from generate: 毫
+2025-05-18 15:34:32,289 - __main__ - INFO - Streaming chunk from generate: 摩
+2025-05-18 15:34:32,289 - __main__ - INFO - Streaming chunk from generate: 尔
+2025-05-18 15:34:32,301 - __main__ - INFO - Streaming chunk from generate: /
+2025-05-18 15:34:32,302 - __main__ - INFO - Streaming chunk from generate: 升
+2025-05-18 15:34:32,343 - __main__ - INFO - Streaming chunk from generate: （
+2025-05-18 15:34:32,345 - __main__ - INFO - Streaming chunk from generate: 高
+2025-05-18 15:34:32,373 - __main__ - INFO - Streaming chunk from generate: 于
+2025-05-18 15:34:32,376 - __main__ - INFO - Streaming chunk from generate: 正常
+2025-05-18 15:34:32,398 - __main__ - INFO - Streaming chunk from generate: 标准
+2025-05-18 15:34:32,400 - __main__ - INFO - Streaming chunk from generate: ）
+
+
+2025-05-18 15:34:32,412 - __main__ - INFO - Streaming chunk from generate: 希望
+2025-05-18 15:34:32,413 - __main__ - INFO - Streaming chunk from generate: 这些
+2025-05-18 15:34:32,430 - __main__ - INFO - Streaming chunk from generate: 信息
+2025-05-18 15:34:32,432 - __main__ - INFO - Streaming chunk from generate: 能
+2025-05-18 15:34:32,452 - __main__ - INFO - Streaming chunk from generate: 对
+2025-05-18 15:34:32,455 - __main__ - INFO - Streaming chunk from generate: 您
+2025-05-18 15:34:32,468 - __main__ - INFO - Streaming chunk from generate: 有所
+2025-05-18 15:34:32,470 - __main__ - INFO - Streaming chunk from generate: 帮助
+2025-05-18 15:34:32,492 - __main__ - INFO - Streaming chunk from generate: ！
+2025-05-18 15:34:32,493 - __main__ - INFO - Streaming chunk from generate: 如果
+2025-05-18 15:34:32,518 - __main__ - INFO - Streaming chunk from generate: 还有
+2025-05-18 15:34:32,521 - __main__ - INFO - Streaming chunk from generate: 其他
+2025-05-18 15:34:32,530 - __main__ - INFO - Streaming chunk from generate: 问题
+2025-05-18 15:34:32,532 - __main__ - INFO - Streaming chunk from generate: ，请
+2025-05-18 15:34:32,552 - __main__ - INFO - Streaming chunk from generate: 随
+2025-05-18 15:34:32,554 - __main__ - INFO - Streaming chunk from generate: 时
+2025-05-18 15:34:32,587 - __main__ - INFO - Streaming chunk from generate: 询
+2025-05-18 15:34:32,588 - __main__ - INFO - Streaming chunk from generate: 问
+2025-05-18 15:34:32,588 - __main__ - INFO - Streaming chunk from generate: 。
+2025-05-18 15:34:32,588 - __main__ - INFO - Streaming chunk from generate: 
+2025-05-18 15:34:32,589 - __main__ - INFO - Streaming chunk from generate: 
+2025-05-18 15:35:27,921 - __main__ - INFO - The user's user_input is: 我询问的是张三，不是张三九
+2025-05-18 15:35:27,939 - demoRagAgent - INFO - Agent processing user query
+2025-05-18 15:35:30,537 - demoRagAgent - INFO - Using cached prompt template for prompts/prompt_template_agent.txt
+2025-05-18 15:35:31,193 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-05-18 15:35:31,867 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:35:31,885 - __main__ - INFO - Streaming chunk from agent: 抱
+2025-05-18 15:35:31,888 - __main__ - INFO - Streaming chunk from agent: 歉
+2025-05-18 15:35:31,916 - __main__ - INFO - Streaming chunk from agent: ，我
+2025-05-18 15:35:31,918 - __main__ - INFO - Streaming chunk from agent: 只能
+2025-05-18 15:35:31,948 - __main__ - INFO - Streaming chunk from agent: 提供
+2025-05-18 15:35:31,950 - __main__ - INFO - Streaming chunk from agent: 张
+2025-05-18 15:35:31,970 - __main__ - INFO - Streaming chunk from agent: 三
+2025-05-18 15:35:31,973 - __main__ - INFO - Streaming chunk from agent: 的
+2025-05-18 15:35:32,046 - __main__ - INFO - Streaming chunk from agent: 健康
+2025-05-18 15:35:32,048 - __main__ - INFO - Streaming chunk from agent: 档
+2025-05-18 15:35:32,050 - __main__ - INFO - Streaming chunk from agent: 案
+2025-05-18 15:35:32,052 - __main__ - INFO - Streaming chunk from agent: 信息
+2025-05-18 15:35:32,062 - __main__ - INFO - Streaming chunk from agent: 。如果
+2025-05-18 15:35:32,063 - __main__ - INFO - Streaming chunk from agent: 您
+2025-05-18 15:35:32,078 - __main__ - INFO - Streaming chunk from agent: 需要
+2025-05-18 15:35:32,080 - __main__ - INFO - Streaming chunk from agent: 更
+2025-05-18 15:35:32,103 - __main__ - INFO - Streaming chunk from agent: 具体
+2025-05-18 15:35:32,106 - __main__ - INFO - Streaming chunk from agent: 的信息
+2025-05-18 15:35:32,124 - __main__ - INFO - Streaming chunk from agent: 或
+2025-05-18 15:35:32,127 - __main__ - INFO - Streaming chunk from agent: 查询
+2025-05-18 15:35:32,148 - __main__ - INFO - Streaming chunk from agent: 其他
+2025-05-18 15:35:32,151 - __main__ - INFO - Streaming chunk from agent: 人的
+2025-05-18 15:35:32,172 - __main__ - INFO - Streaming chunk from agent: 档
+2025-05-18 15:35:32,174 - __main__ - INFO - Streaming chunk from agent: 案
+2025-05-18 15:35:32,207 - __main__ - INFO - Streaming chunk from agent: ，请
+2025-05-18 15:35:32,210 - __main__ - INFO - Streaming chunk from agent: 告诉
+2025-05-18 15:35:32,231 - __main__ - INFO - Streaming chunk from agent: 我
+2025-05-18 15:35:32,236 - __main__ - INFO - Streaming chunk from agent: 。
+2025-05-18 15:35:32,238 - __main__ - INFO - Streaming chunk from agent: 
+2025-05-18 15:35:32,241 - __main__ - INFO - Streaming chunk from agent: 

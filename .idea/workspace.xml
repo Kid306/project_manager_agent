@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1134155-a1c0-4bfd-bc4d-4380e7f5064a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoRagAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoRagAgent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/output/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/llms.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/llms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectorSaveTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectorSaveTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/webUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +15,7 @@
   </component>
   <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../../Programs/Go/Go1.24.0" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
@@ -30,14 +27,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.apiTest.executor": "Run",
     "Python.demoRagAgent.executor": "Run",
     "Python.main.executor": "Run",
     "Python.vectorSaveTest.executor": "Run",
+    "Python.webUI.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
     "last_opened_file_path": "D:/kid/Code/Python/LangGraphChatBot/04_RagAgent",
@@ -57,7 +56,29 @@
       <recent name="D:\kid\Code\Python\LangGraphChatBot\04_RagAgent" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.demoRagAgent">
+  <component name="RunManager" selected="Python.webUI">
+    <configuration name="apiTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="04_RagAgent" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apiTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="demoRagAgent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="04_RagAgent" />
       <option name="ENV_FILES" value="" />
@@ -124,10 +145,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="webUI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="04_RagAgent" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/webUI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.demoRagAgent" />
+        <item itemvalue="Python.webUI" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.apiTest" />
+        <item itemvalue="Python.demoRagAgent" />
         <item itemvalue="Python.vectorSaveTest" />
       </list>
     </recent_temporary>

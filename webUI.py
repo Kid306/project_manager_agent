@@ -383,7 +383,7 @@ with gr.Blocks(title="聊天助手", css="""
 
     # 绑定新建会话按钮点击事件，调用新建会话函数
     new_conv_button.click(new_conversation, [current_user], [login_output, current_conversation]
-    ).then(
+                          ).then(
         # 清空聊天对话框
         lambda: [], None, chatbot
     ).then(
@@ -398,7 +398,7 @@ with gr.Blocks(title="聊天助手", css="""
 
     # 绑定加载会话按钮点击事件，加载选中的会话历史
     load_conv_button.click(load_conversation, [current_user, conv_dropdown], chatbot
-    ).then(
+                           ).then(
         # 更新当前会话 ID
         lambda user, conv: extract_conversation_id(conv, user), [current_user, conv_dropdown], current_conversation
     ).then(
