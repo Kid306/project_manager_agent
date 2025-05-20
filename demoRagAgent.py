@@ -1,5 +1,9 @@
 # 导入日志模块，用于记录程序运行时的信息
 import logging
+import json
+
+from utils.helper import create_chain
+from utils.logger import logger
 from concurrent_log_handler import ConcurrentRotatingFileHandler
 # 导入操作系统接口模块，用于处理文件路径和环境变量
 import os
@@ -18,7 +22,7 @@ from typing_extensions import TypedDict
 # 导入LangChain的提示模板类
 from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
 # 导入LangChain的消息基类
-from langchain_core.messages import BaseMessage
+from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 # 导入消息处理函数，用于追加消息
 from langgraph.graph.message import add_messages
 # 导入预构建的工具条件和工具节点
@@ -42,23 +46,20 @@ from langgraph.checkpoint.postgres import PostgresSaver
 from psycopg_pool import ConnectionPool
 # 导入Pydantic的基类和字段定义工具
 from pydantic import BaseModel, Field
+
+from utils.domain import DocumentRelevanceScore, MessagesState, RequirementBreakdownResult
 # 导入自定义的get_llm函数，用于获取LLM模型
-from utils.llms import get_llm
+from utils.llms import get_llm, get_chat_model, get_embedding_model, \
+    get_task_agent_model
 # 导入工具配置模块
 from utils.tools_config import get_tools
 # 导入统一的 Config 类
 from utils.config import Config
 
 
-# Author:@南哥AGI研习社 (B站 or YouTube 搜索“南哥AGI研习社”)
+# Author:@南哥AGI研习社 (B站 or YouTube 搜索"南哥AGI研习社")
 
 
-# # 设置日志基本配置，级别为DEBUG或INFO
-logger = logging.getLogger(__name__)
-# 设置日志器级别为DEBUG
-logger.setLevel(logging.DEBUG)
-# logger.setLevel(logging.INFO)
-logger.handlers = []  # 清空默认处理器
 # 使用ConcurrentRotatingFileHandler
 handler = ConcurrentRotatingFileHandler(
     # 日志文件
@@ -76,14 +77,6 @@ handler.setFormatter(logging.Formatter(
 logger.addHandler(handler)
 
 
-# 定义消息状态类，使用TypedDict进行类型注解
-class MessagesState(TypedDict):
-    # 定义messages字段，类型为消息序列，使用add_messages处理追加
-    messages: Annotated[Sequence[BaseMessage], add_messages]
-    # 定义relevance_score字段，用于存储文档相关性评分
-    relevance_score: Annotated[Optional[str], "Relevance score of retrieved documents, 'yes' or 'no'"]
-    # 定义rewrite_count字段，用于跟踪问题重写的次数，达到次数退出graph的递归循环
-    rewrite_count: Annotated[int, "Number of times query has been rewritten"]
 
 # 定义工具配置管理类，用于管理工具及其路由配置
 class ToolConfig:
@@ -112,6 +105,11 @@ class ToolConfig:
                 routing_config[tool_name] = "grade_documents"
                 # 记录调试日志，说明该工具被路由到 "grade_documents"，并标注为检索工具
                 logger.debug(f"Tool '{tool_name}' routed to 'grade_documents' (retrieval tool)")
+            elif "requirement_breakdown" in tool_name:
+                # 任务分解类工具，将其目标路由设置为 "requirement_breakdown"
+                routing_config[tool_name] = "generate"
+                # 记录调试日志，说明该工具被路由到 "requirement_breakdown"，并标注为检索工具
+                logger.debug(f"Tool '{tool_name}' routed to 'generate' (task breakdown tool)")
             # 如果工具名称不包含 "retrieve"
             else:
                 # 将其路由目标设置为 "generate"（直接生成结果）
@@ -139,10 +137,6 @@ class ToolConfig:
     def get_tool_routing_config(self):
         # 直接返回 self.tool_routing_config，提供外部访问路由配置的接口
         return self.tool_routing_config
-
-class DocumentRelevanceScore(BaseModel):
-    # 定义binary_score字段，表示相关性评分，取值为"yes"或"no"
-    binary_score: str = Field(description="Relevance score 'yes' or 'no'")
 
 # 自定义异常，表示数据库连接池初始化或状态异常
 class ConnectionPoolError(Exception):
@@ -276,9 +270,9 @@ def get_latest_question(state: MessagesState) -> Optional[str]:
 def filter_messages(messages: list) -> list:
     """过滤消息列表，仅保留 AIMessage 和 HumanMessage 类型消息"""
     # 过滤出 AIMessage 和 HumanMessage 类型的消息
-    filtered = [msg for msg in messages if msg.__class__.__name__ in ['AIMessage', 'HumanMessage']]
+    filtered = [msg for msg in messages if msg.__class__.__name__ in ['AIMessage', 'HumanMessage', 'ToolMessage']]
     # 如果过滤后的消息超过N条，返回最后N条，否则返回过滤后的完整列表
-    return filtered[-5:] if len(filtered) > 5 else filtered
+    return filtered[-100:] if len(filtered) > 100 else filtered
 
 
 # 定义跨线程的持久化存储的存储和过滤函数
@@ -299,7 +293,7 @@ def store_memory(question: BaseMessage, config: RunnableConfig, store: BaseStore
         memories = store.search(namespace, query=str(question.content))
         user_info = "\n".join([d.value["data"] for d in memories])
 
-        # 如果包含“记住”，存储新记忆
+        # 如果包含"记住"，存储新记忆
         if "记住" in question.content.lower():
             memory = escape(question.content)
             store.put(namespace, str(uuid.uuid4()), {"data": memory})
@@ -310,52 +304,6 @@ def store_memory(question: BaseMessage, config: RunnableConfig, store: BaseStore
         logger.error(f"Error in store_memory: {e}")
         return ""
 
-
-# 定义创建处理链的函数
-def create_chain(llm_chat, template_file: str, structured_output=None):
-    """创建 LLM 处理链，加载提示模板并绑定模型，使用缓存避免重复读取文件。
-
-    Args:
-        llm_chat: 语言模型实例。
-        template_file: 提示模板文件路径。
-        structured_output: 可选的结构化输出模型。
-
-    Returns:
-        Runnable: 配置好的处理链。
-
-    Raises:
-        FileNotFoundError: 如果模板文件不存在。
-    """
-    # 定义静态缓存和锁（仅在函数第一次调用时初始化）
-    if not hasattr(create_chain, "prompt_cache"):
-        # 缓存字典
-        create_chain.prompt_cache = {}
-        # 线程锁 确保缓存的读写是线程安全的
-        create_chain.lock = threading.Lock()
-
-    try:
-        # 先检查缓存，无锁访问
-        if template_file in create_chain.prompt_cache:
-            prompt_template = create_chain.prompt_cache[template_file]
-            logger.info(f"Using cached prompt template for {template_file}")
-        else:
-            # 使用锁保护缓存访问
-            with create_chain.lock:
-                # 检查缓存中是否已有该模板
-                if template_file not in create_chain.prompt_cache:
-                    logger.info(f"Loading and caching prompt template from {template_file}")
-                    # 从文件加载提示模板并存入缓存
-                    create_chain.prompt_cache[template_file] = PromptTemplate.from_file(template_file, encoding="utf-8")
-                # 从缓存中获取提示模板
-                prompt_template = create_chain.prompt_cache[template_file]
-
-        # 创建聊天提示模板，使用模板内容
-        prompt = ChatPromptTemplate.from_messages([("human", prompt_template.template)])
-        # 返回提示模板与LLM的组合链，若有结构化输出则绑定
-        return prompt | (llm_chat.with_structured_output(structured_output) if structured_output else llm_chat)
-    except FileNotFoundError:
-        logger.error(f"Template file {template_file} not found")
-        raise
 
 
 # 数据库重试机制,最多重试3次,指数退避等待2-10秒,仅对数据库操作错误重试
@@ -406,18 +354,34 @@ def agent(state: MessagesState, config: RunnableConfig, *, store: BaseStore, llm
     Returns:
         dict: 更新后的对话状态。
     """
-    # 记录代理开始处理查询
-    logger.info("Agent processing user query")
     # 定义存储命名空间，使用用户ID
     namespace = ("memories", config["configurable"]["user_id"])
     # 尝试执行以下代码块
     try:
-        # 获取最后一条消息即用户问题
-        question = state["messages"][-1]
-        # logger.info(f"agent question:{question}")
+        # 获取用户的最新问题（而不是直接获取最后一条消息）
+        question = get_latest_question(state)
+        if question is None:
+            logger.error("No valid user question found in state")
+            return {"messages": [{"role": "system", "content": "无法找到有效的用户问题"}]}
+            
+        # 获取消息列表中的最后一条消息，可能是任务分解结果
+        last_message = state["messages"][-1]
+        task_context = ""
+        
+        # 检查最后一条消息是否是AIMessage（可能包含任务分解结果）
+        if isinstance(last_message, AIMessage) and hasattr(last_message, "content"):
+            try:
+                # 尝试解析JSON内容作为任务分解结果
+                task_breakdown = json.loads(last_message.content)
+                task_context = f"任务分解结果: {last_message.content}"
+                logger.info("Found task breakdown result in last message")
+            except json.JSONDecodeError:
+                # 如果不是有效的JSON，可能是普通回复
+                task_context = ""
+                logger.info("Last message is not a valid JSON task breakdown")
 
         # 自定义跨线程持久化存储记忆并获取相关信息
-        user_info = store_memory(question, config, store)
+        user_info = store_memory(HumanMessage(content=question), config, store)
         # 自定义线程内存储逻辑 过滤消息
         messages = filter_messages(state["messages"])
 
@@ -426,9 +390,13 @@ def agent(state: MessagesState, config: RunnableConfig, *, store: BaseStore, llm
 
         # 创建代理处理链
         agent_chain = create_chain(llm_chat_with_tool, Config.PROMPT_TEMPLATE_TXT_AGENT)
-        # 调用代理链处理消息
-        response = agent_chain.invoke({"question": question,"messages": messages, "userInfo": user_info})
-        # logger.info(f"Agent response: {response}")
+        # 调用代理链处理消息，传入任务上下文
+        response = agent_chain.invoke({
+            "question": question,
+            "messages": messages, 
+            "userInfo": user_info,
+            "taskContext": task_context
+        })
         # 返回更新后的对话状态
         return {"messages": [response]}
     # 捕获异常
@@ -560,8 +528,34 @@ def generate(state: MessagesState, llm_chat) -> dict:
         return {"messages": [{"role": "system", "content": "无法生成回复"}]}
 
 
+def deal_tasks(state: MessagesState, llm_chat) -> dict:
+    # 记录开始生成回复
+    logger.info("Generating deal_tasks result")
+    
+    if "task_breakdown_messages" not in state or not state["task_breakdown_messages"]:
+        logger.error("Task breakdown messages state is empty")
+        return {"messages": [{"role": "system", "content": "任务分解失败"}]}
+
+    try:
+        # 获取任务分解结果
+        task_breakdown_messages = state.get("task_breakdown_messages")
+        
+        # 将任务分解结果序列化为JSON字符串
+        state["messages"] = state.get("messages", []) + [
+            AIMessage(content=json.dumps(task_breakdown_messages, ensure_ascii=False)),
+        ]
+        
+        # 更新状态
+        state["messages"] = updated_messages
+        
+        # 将结果返回给agent
+        return {"messages": updated_messages}
+    except Exception as e:
+        logger.error(f"Error in deal_tasks: {e}")
+        return {"messages": [{"role": "system", "content": f"处理任务时出错: {str(e)}"}]}
+
 # 定义Edge 根据工具调用的结果动态决定下一步路由
-def route_after_tools(state: MessagesState, tool_config: ToolConfig) -> Literal["generate", "grade_documents"]:
+def route_after_tools(state: MessagesState, tool_config: ToolConfig) -> Literal["generate", "grade_documents", "deal_tasks"]:
     """
     根据工具调用的结果动态决定下一步路由，使用配置字典支持多工具并包含容错处理。
 
@@ -570,7 +564,7 @@ def route_after_tools(state: MessagesState, tool_config: ToolConfig) -> Literal[
         tool_config: 工具配置参数。
 
     Returns:
-        Literal["generate", "grade_documents"]: 下一步的目标节点。
+        Literal["generate", "grade_documents", "deal_tasks"]: 下一步的目标节点。
     """
     # 检查状态是否包含消息列表，若为空则记录错误并默认路由到 generate
     if not state.get("messages") or not isinstance(state["messages"], list):
@@ -587,7 +581,7 @@ def route_after_tools(state: MessagesState, tool_config: ToolConfig) -> Literal[
             return "generate"
 
         # 检查消息是否来自已注册的工具
-        tool_name = last_message.name
+        tool_name = last_message.name.lower()  # 转换为小写以匹配配置
         if tool_name not in tool_config.get_tool_names():
             logger.info(f"Unknown tool {tool_name}, routing to generate")
             return "generate"
@@ -672,6 +666,36 @@ def route_after_grade(state: MessagesState) -> Literal["generate", "rewrite"]:
         logger.error(f"Unexpected error in route_after_grade: {e}, defaulting to rewrite")
         return "rewrite"
 
+# 定义Edge 根据状态中的评分结果决定下一步路由
+def route_after_deal_tasks(state: MessagesState) -> Literal["generate", "rewrite", "agent"]:
+    """
+    根据状态中的任务分解结果决定下一步路由，包含增强的状态校验和容错处理。
+
+    Args:
+        state: 当前对话状态，预期包含 messages 和 task_breakdown_messages 字段。
+
+    Returns:
+        Literal["generate", "rewrite", "agent"]: 下一步的目标节点。
+    """
+    # 检查状态是否为有效字典，若无效则记录错误并默认路由到 rewrite
+    if not isinstance(state, dict):
+        logger.error("State is not a valid dictionary, defaulting to rewrite")
+        return "rewrite"
+
+    # 检查状态是否包含 task_breakdown_messages 字段，若缺失则记录错误并默认路由到 rewrite
+    if "task_breakdown_messages" not in state or not isinstance(state["task_breakdown_messages"], (list, tuple)):
+        logger.error("State missing valid task_breakdown_messages field, defaulting to rewrite")
+        return "rewrite"
+
+    # 检查 task_breakdown_messages 是否为空，若为空则记录警告并默认路由到 rewrite
+    if not state["task_breakdown_messages"]:
+        logger.warning("task_breakdown_messages list is empty, defaulting to rewrite")
+        return "rewrite"
+
+    # 这里我们已经确认 task_breakdown_messages 是有效的，可以路由到 agent
+    logger.info("Task breakdown successful, routing to agent")
+    return "generate"
+
 
 # 保存状态图的可视化表示
 def save_graph_visualization(graph: StateGraph, filename: str = "graph.png") -> None:
@@ -693,6 +717,9 @@ def save_graph_visualization(graph: StateGraph, filename: str = "graph.png") -> 
     except IOError as e:
         # 记录警告日志
         logger.warning(f"Failed to save graph visualization: {e}")
+    except Exception as e:
+        # 记录其他错误日志
+        logger.error(f"Failed to render graph visualization: {e}")
 
 
 # 创建并配置状态图
@@ -761,16 +788,19 @@ def create_graph(db_connection_pool: ConnectionPool, llm_chat, llm_embedding, to
     workflow.add_node("rewrite", lambda state: rewrite(state,llm_chat=llm_chat))
     # 添加生成节点
     workflow.add_node("generate", lambda state: generate(state, llm_chat=llm_chat))
-    # 添加文档相关性评分节点
+    # # 添加文档相关性评分节点
     workflow.add_node("grade_documents", lambda state: grade_documents(state, llm_chat=llm_chat))
+    workflow.add_node("deal_tasks", lambda state: deal_tasks(state, llm_chat=llm_chat))
 
     # 添加从起始到代理的边
     workflow.add_edge(START, end_key="agent")
     # 添加代理的条件边，根据工具调用的工具名称决定下一步路由
     workflow.add_conditional_edges(source="agent", path=tools_condition, path_map={"tools": "call_tools", END: END})
     # 添加检索的条件边，根据工具调用的结果动态决定下一步路由
-    workflow.add_conditional_edges(source="call_tools", path=lambda state: route_after_tools(state, tool_config),path_map={"generate": "generate", "grade_documents": "grade_documents"})
-    # 添加检索的条件边，根据状态中的评分结果决定下一步路由
+    workflow.add_conditional_edges(source="call_tools", path=lambda state: route_after_tools(state, tool_config),path_map={"generate": "generate", "deal_tasks": "deal_tasks", "grade_documents": "grade_documents"})
+
+    workflow.add_conditional_edges(source="deal_tasks", path=route_after_deal_tasks, path_map={"generate": "generate", "rewrite": "rewrite"})
+    # # 添加检索的条件边，根据状态中的评分结果决定下一步路由
     workflow.add_conditional_edges(source="grade_documents", path=route_after_grade, path_map={"generate": "generate", "rewrite": "rewrite"})
     # 添加从生成到结束的边
     workflow.add_edge(start_key="generate", end_key=END)
@@ -791,8 +821,26 @@ def graph_response(graph: StateGraph, user_input: str, config: dict, tool_config
         config: 运行时配置。
     """
     try:
-        # 启动状态图流处理用户输入
-        events = graph.stream({"messages": [{"role": "user", "content": user_input}], "rewrite_count": 0}, config)
+        # 启动状态图流处理用户输入，包含所有必需的字段
+        initial_state = {
+            "messages": [{"role": "user", "content": user_input}],
+            "rewrite_count": 0,
+            "relevance_score": None,
+            "task_breakdown_messages": []
+        }
+        
+        # 创建一个线程ID，用于跟踪此次对话
+        thread_id = f"thread_{uuid.uuid4()}"
+        config["configurable"]["thread_id"] = thread_id
+        
+        # 打印初始状态
+        print("\n[DEBUG] Initial state:")
+        print(f"  Messages: {initial_state['messages']}")
+        print()
+        
+        # 启动状态图流
+        events = graph.stream(initial_state, config)
+        
         # 遍历事件流
         for event in events:
             # 遍历事件中的值
@@ -846,10 +894,11 @@ def main():
     db_connection_pool = None
     try:
         # 调用get_llm函数初始化Chat模型实例和Embedding模型实例
-        llm_chat, llm_embedding = get_llm(Config.LLM_TYPE)
-
+        # llm_chat, llm_embedding = get_llm(Config.LLM_TYPE)
+        llm_chat, llm_embedding = get_chat_model(Config.LLM_TYPE), get_embedding_model(Config.LLM_TYPE)
+        task_llm = get_task_agent_model(Config.LLM_TYPE)
         # 获取工具列表
-        tools = get_tools(llm_embedding)
+        tools = get_tools(llm_embedding, task_llm)
 
         # 创建 ToolConfig 实例
         tool_config = ToolConfig(tools)

@@ -4,10 +4,20 @@ import os
 class Config:
     """统一的配置类，集中管理所有常量"""
     # prompt文件路径
-    PROMPT_TEMPLATE_TXT_AGENT = "prompts/prompt_template_agent.txt"
+    # PROMPT_TEMPLATE_TXT_AGENT = "prompts/prompt_template_agent.txt"
+    PROMPT_TEMPLATE_TXT_AGENT = "prompts/prompt_template_agent_new.txt"
     PROMPT_TEMPLATE_TXT_GRADE = "prompts/prompt_template_grade.txt"
     PROMPT_TEMPLATE_TXT_REWRITE = "prompts/prompt_template_rewrite.txt"
     PROMPT_TEMPLATE_TXT_GENERATE = "prompts/prompt_template_generate.txt"
+
+
+    PROMPT_TEMPLATE_TXT_DEAL_TASKS = "prompts/prompt_template_deal_tasks.txt"
+
+
+    # Task Agent提示词
+    TASK_AGENT_PROMPT_TEMPLATE_TXT_REQUIREMENT_BREAKDOWN = "prompts/task_agent_prompt_template_requirement_breakdown.txt"
+
+
 
     # Chroma 数据库配置
     CHROMADB_DIRECTORY = "chromaDB"

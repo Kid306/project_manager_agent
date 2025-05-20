@@ -37,7 +37,7 @@ llmType = "openai"
 
 # 设置测试文本类型 Chinese 或 English
 TEXT_LANGUAGE = 'Chinese'
-INPUT_PDF = "input/健康档案.pdf"
+INPUT_PDF = "input/用户信息.pdf"
 # TEXT_LANGUAGE = 'English'
 # INPUT_PDF = "input/DeepSeek_R1.pdf"
 
