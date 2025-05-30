@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1134155-a1c0-4bfd-bc4d-4380e7f5064a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/input/用户信息.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prompts/prompt_template_agent_new.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prompts/prompt_template_deal_tasks.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prompts/task_agent_prompt_template_requirement_breakdown.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/helper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromaDB/cc3ab194-abf4-4a31-8a10-aa71a2c35f50/data_level0.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromaDB/cc3ab194-abf4-4a31-8a10-aa71a2c35f50/header.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromaDB/cc3ab194-abf4-4a31-8a10-aa71a2c35f50/length.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromaDB/cc3ab194-abf4-4a31-8a10-aa71a2c35f50/link_lists.bin" beforeDir="false" afterPath="$PROJECT_DIR$/utils/domain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromaDB/chroma.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cursor/rules/langgraph.mdc" beforeDir="false" afterPath="$PROJECT_DIR$/.cursor/rules/langgraph.mdc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demoRagAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoRagAgent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/output/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/llms.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/llms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/tools_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/tools_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectorSaveTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectorSaveTest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,33 +32,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.apiTest.executor": "Run",
-    "Python.demoRagAgent.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.vectorSaveTest.executor": "Run",
-    "Python.webUI.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "project__manager__dev",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/kid/Code/Python/LangGraphChatBot/04_RagAgent/input",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.apiTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.demoRagAgent.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.vectorSaveTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.webUI.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;project__manager__dev&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/kid/Code/Java/project_manager_backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\kid\Code\Python\LangGraphChatBot\04_RagAgent\input" />

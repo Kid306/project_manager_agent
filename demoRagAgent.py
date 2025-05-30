@@ -106,10 +106,10 @@ class ToolConfig:
                 # 记录调试日志，说明该工具被路由到 "grade_documents"，并标注为检索工具
                 logger.debug(f"Tool '{tool_name}' routed to 'grade_documents' (retrieval tool)")
             elif "requirement_breakdown" in tool_name:
-                # 任务分解类工具，将其目标路由设置为 "requirement_breakdown"
-                routing_config[tool_name] = "generate"
-                # 记录调试日志，说明该工具被路由到 "requirement_breakdown"，并标注为检索工具
-                logger.debug(f"Tool '{tool_name}' routed to 'generate' (task breakdown tool)")
+                # 任务分解类工具，将其目标路由设置为 "deal_tasks"
+                routing_config[tool_name] = "deal_tasks"
+                # 记录调试日志，说明该工具被路由到 "deal_tasks"，并标注为任务分解工具
+                logger.debug(f"Tool '{tool_name}' routed to 'deal_tasks' (task breakdown tool)")
             # 如果工具名称不包含 "retrieve"
             else:
                 # 将其路由目标设置为 "generate"（直接生成结果）
@@ -564,7 +564,7 @@ def route_after_tools(state: MessagesState, tool_config: ToolConfig) -> Literal[
         tool_config: 工具配置参数。
 
     Returns:
-        Literal["generate", "grade_documents", "deal_tasks"]: 下一步的目标节点。
+        Literal["generate", "grade_documents"]: 下一步的目标节点。
     """
     # 检查状态是否包含消息列表，若为空则记录错误并默认路由到 generate
     if not state.get("messages") or not isinstance(state["messages"], list):
@@ -581,7 +581,7 @@ def route_after_tools(state: MessagesState, tool_config: ToolConfig) -> Literal[
             return "generate"
 
         # 检查消息是否来自已注册的工具
-        tool_name = last_message.name.lower()  # 转换为小写以匹配配置
+        tool_name = last_message.name
         if tool_name not in tool_config.get_tool_names():
             logger.info(f"Unknown tool {tool_name}, routing to generate")
             return "generate"
@@ -797,7 +797,7 @@ def create_graph(db_connection_pool: ConnectionPool, llm_chat, llm_embedding, to
     # 添加代理的条件边，根据工具调用的工具名称决定下一步路由
     workflow.add_conditional_edges(source="agent", path=tools_condition, path_map={"tools": "call_tools", END: END})
     # 添加检索的条件边，根据工具调用的结果动态决定下一步路由
-    workflow.add_conditional_edges(source="call_tools", path=lambda state: route_after_tools(state, tool_config),path_map={"generate": "generate", "deal_tasks": "deal_tasks", "grade_documents": "grade_documents"})
+    workflow.add_conditional_edges(source="call_tools", path=lambda state: route_after_tools(state, tool_config),path_map={"generate": "generate", "deal_tasks": "deal_tasks"})
 
     workflow.add_conditional_edges(source="deal_tasks", path=route_after_deal_tasks, path_map={"generate": "generate", "rewrite": "rewrite"})
     # # 添加检索的条件边，根据状态中的评分结果决定下一步路由
