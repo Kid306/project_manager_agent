@@ -5,7 +5,6 @@ from langchain_openai import ChatOpenAI,OpenAIEmbeddings
 import logging
 
 
-# Author:@南哥AGI研习社 (B站 or YouTube 搜索“南哥AGI研习社”)
 
 
 # 设置日志模版
@@ -16,11 +15,11 @@ logger = logging.getLogger(__name__)
 # 模型配置字典
 MODEL_CONFIGS = {
     "openai": {
-        "base_url": "https://openrouter.ai/api/v1",
-        "api_key": "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",
+        "base_url": "xxx",
+        "api_key": "xxx",
         "chat_model": "openai/gpt-4o-mini",
-        "embedding_base_url": "https://nangeai.top/v1",
-        "embedding_api_key": "sk-iR65HZwPsfaepYlopSEN2btclqYahqhpr0oSXjHUE4rZzvv5",
+        "embedding_base_url": "xxx",
+        "embedding_api_key": "xxx",
         "embedding_model": "text-embedding-3-small"
     },
     # "oneapi": {

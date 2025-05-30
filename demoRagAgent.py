@@ -57,7 +57,6 @@ from utils.tools_config import get_tools
 from utils.config import Config
 
 
-# Author:@南哥AGI研习社 (B站 or YouTube 搜索"南哥AGI研习社")
 
 
 # 使用ConcurrentRotatingFileHandler
